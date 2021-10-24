@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    --fisrt-color: #30B18B;
+    --second-color: #78CF67;
+    --thid-color: #FECA74;
+    --fourth-color: #FFE3B3;
+}
