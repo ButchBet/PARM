@@ -1,1 +1,79 @@
-<p>login works!</p>
+<div class="container">
+    <div class="left">
+        <div class="form">
+            <form action="POST" class="form" id="login" (submit)="loginValidation($event)">
+    <header>
+        <div class="formChange">
+            <a class="formLink 
+            formLinkFisrt 
+            formLinkFisrt1 
+            formLinkActive" 
+            id="linkCreateAccount">Ingresa</a>
+            <a class="formLink 
+            formLinkFisrt 
+            formLinkFisrt2 
+            formLinkDesactive" 
+            id="linkLogin" [routerLink]="['regist']">Registra</a>
+        </div>
+    </header>
+    
+    <main>
+        <h2 class="formTitle">Bienvenido!</h2>
+
+        <div class="formMessage FormMesageFirst formMessage{{ messageColor }}">{{ errorMessage }}</div>
+
+        <div class="formInputGroup">
+        
+            <input type="text" 
+            class="formInput" 
+            id="loginName" 
+            autofocus 
+            placeholder="Usuario/correo" 
+            required 
+            minlength="8" 
+            [(ngModel)]="userName">
+    
+        </div>
+
+        <div class="formInputGroup formInputLast">
+        
+            <input type="password" 
+            class="formInput"
+            id="loginPass"  
+            placeholder="Contraseña" 
+            required 
+            minlength="8" 
+            [(ngModel)]="userPassword">
+    
+        </div>
+
+        <div class="formInputErrorMessage formMesageLast"></div>
+
+
+        <a class="formLink formLinkLast" [routerLink]="['forget']">¿Olvidaste tu contraseña?</a>
+
+    </main>
+
+    <footer>
+        <div class="formFooterFirst">
+            <label for="dataRemember">Recordar </label>
+            <input type="checkbox" 
+            id="dataRemember" 
+            class="formCheckBox">
+        </div>
+
+        <div class="formFooterSecond">
+            <input type="submit" 
+            value="Ingresar" 
+            class="formButton">
+        </div>
+    </footer>
+
+</form>
+        </div>
+    </div>
+
+    <div class="right">
+        <img src="../../../../assets/loginImage.jpg" alt="logo">
+    </div>
+</div>
