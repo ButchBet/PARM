@@ -1,40 +1,4 @@
-.container,
-.left,
-.form {
-    display: flex;
 
-}
 
-.container {
-    width: 100%;
-    height: 100%;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
 
-.left {
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
-}
-
-.left,
-.right {
-    width: 850px;
-    margin: 0;
-    height: 100vh;
-}
-
-img {
-    width: 100%;
-    height: 100%;
-}
-
-.form {
-    flex-flow: row wrap;
-    width: 40%;
-    height: 40%;
-    background: var(--first-color);
-    border-radius: 10px;
-}
 

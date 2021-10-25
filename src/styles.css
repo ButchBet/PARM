@@ -1,54 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 body { 
-    background-color: #FFE3B3;
-}
-
-.body{
     --color-primary: #30B18B;
     --color-primary-dark:#78CF67;
+    --color-primary-light:#a7ef99;
     --color-secondary: #363636;
-    --color-error: #FECA74;
-    --color-success: #FFE3B3;
-    --border-radius: 4px;
+    --third-color: #ffffff;
+    --fourth-color: #000000;
+    --color-error: #ff0000;
+    --color-success: #30B18B;
 
+    background-color: var(--third-color);
+    color: var(--fourth-color);
     margin: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    font-size: 18px;
-
-
-    font-family: 'Open Sans', sans-serif;
-    color: #ffffff;
-    background: var(--color-primary-dark);
+    padding: 0;
 }
 
-.container{
-    width: 270px;
-    max-width: 300px;
-    margin: 1rem;
-    padding: 2rem;
-    box-shadow: 2px 2px 10px rgb(1, 1, 1);
-    border-radius: 15px;
-    background: var(--color-secondary);
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header,
+.containerAuth,
+.left,
+form,
+main, 
+footer,
+.formChange,
+a.formLinkFisrt,
+.formButton {
+    display: flex;
+}
+
+.containerAuth {
+    width: 100vw;
+    height: 100vh;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+a.formLinkFisrt,
+.left,
+.formButton {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+form {
+    width: 21.15rem;
+    height: 21.15rem;
+    flex-flow: column;
+    background: var(--color-primary-light);
+    box-shadow: 1px 1px 1px var(--fourth-color);
+    border-radius: 10px;
+    padding: .3em;
+}
+
+.left,
+.right {
+    width: 50rem;
+    margin: 0;
+    height: 100vh;
+}
+
+img {
+    width: 100%;
+    height: 100%;
 }
 
 header{
-    height: 35px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: 3em;
+    flex-flow: row wrap;
 }
 
-header, main, footer{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-
+main{
+    flex-flow: column wrap;
+    margin-bottom: 1em;
 }
 
-header, footer{
+header, 
+footer{
     justify-content: center;
     align-content: center;
 }
@@ -56,6 +90,7 @@ header, footer{
 footer{
     flex-direction: row;
     justify-content: space-between;
+    align-content: center;
 }
 
 .formFooterFirst{
@@ -98,7 +133,7 @@ footer{
 
 .formMessage{
     text-align: center;
-    font: 4px;
+    font-size: 13px;
     margin-bottom: 1rem;
 }.formTitle{
     margin-bottom: .5rem;
@@ -155,78 +190,65 @@ footer{
     background: var(--color-secondary);
 }
 
-.formButton{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    height: 50%;
-    padding: 1rem 2rem;
-    font-weight: 100;
-    font-size: 1.1rem;
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 50px;
-    outline: none;
-    cursor: pointer;
-    background: var(--color-primary);
-    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.611);
-}
-
-.formButton:hover{
-    background: var(--color-primary-dark);
-}
-
-.formButton:active{
-    transform: scale(0.95);
-}
-
 .formChange{
-    display: flex;
     border-radius: 100px;
-    width: 55%;
+    width: 70%;
     height: 100%;
-    align-content: center;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 0;
     box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.721);
 }
 
 .formLink{
-    color: #ffffff;
+    color: var(--fourth-color);
     text-decoration: none;
     cursor: pointer;
 }
 
 a.formLinkFisrt{
     font-size: 15px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    width: 24%;
-    border-radius: 100px;
-    padding: 7px 20px;
-    transition: .5s;
+    width: 100%;
+    height: 100%;
 }a.formLinkFisrt1{
     border-radius: 100px 0 0 100px;
 }a.formLinkFisrt2{
     border-radius: 0 100px 100px 0;
-}a.formLinkFisrt1:hover, a.formLinkFisrt2:hover{
+}a.formLinkFisrt1:hover, 
+a.formLinkFisrt2:hover{
     text-decoration: none;
 }a.formLinkFisrt1:focus, a.formLinkFisrt2:focus{
-    transform: scale(0.95);
+    transform: scale(0.98);
 }
 
 .formLinkLast{
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .formLink:hover{
     text-decoration: underline;
 }
 
-.registFooter {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
+.formButton{
+    flex-direction: column;
+    height: 90%;
+    padding: 1rem 2rem;
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: var(--fourth-color);
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    background: var(--color-primary);
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.611);
+    position: relative;
+    right: 6px;
+}
+
+.formButton:hover{
+    background: var(--third-color);
+}
+
+.formButton:active{
+    transform: scale(0.95);
 }

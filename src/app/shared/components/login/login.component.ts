@@ -17,15 +17,15 @@ export class LoginComponent implements OnInit {
 
   errorMessage = "";
 
-  userName:string | undefined;
+  userName:string = "";
 
-  userPassword: string | undefined;
+  userPassword: string = "";
 
   loginValidation(event: Event) {
 
     event.preventDefault()
 
-    const counter = this.usersService.dataCheck(this.userName, this.userPassword, 0);
+    const counter:any = this.usersService.dataCheck(this.userName, this.userPassword, 0);
 
     if(counter) {
       this.errorMessage = "Datos correctos";

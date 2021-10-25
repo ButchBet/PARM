@@ -8,20 +8,20 @@ export class UsersService {
 
     
     // Method to check the input data 
-    dataCheck(name= "", pass = "", condition= 0, email = "", rep = "") {
+    dataCheck(name= "", pass = "", condition= 0, email = "", rep = ""): any {
         let cont = 0;
 
         if(condition === 0) {
         // Login form
-        if(this.usersList[0].name === name && this.usersList[0].password === pass) {
-            return true;
-        } else if(this.usersList[1].name === name && this.usersList[1].password === pass) {
-            return true;
-        } else if(this.usersList[0].email === name && this.usersList[0].password === pass) {
-            return true;
-        } else if(this.usersList[1].email === name && this.usersList[1].password === pass) {
-            return true;
-        }
+        this.usersList.forEach(element => {
+            if(element.name == name && element.password == pass) {
+                return true;
+            } else if(element.email == email && element.password == pass) {
+                return true;
+            } else {
+                return false;
+            }
+        });
         } else {
         // Regist form
         if(this.usersList[0].email === email && this.usersList[0].name === name) {
@@ -40,8 +40,6 @@ export class UsersService {
 
         return cont;
         }
-
-        return false;
     }
 
     // Method to reate the new acount
