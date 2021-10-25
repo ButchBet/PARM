@@ -4,3 +4,8 @@
     --thid-color: #FECA74;
     --fourth-color: #FFE3B3;
 }
+
+body,
+html {
+    background-color: var(--fourth-color);
+}
