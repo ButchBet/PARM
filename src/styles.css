@@ -28,7 +28,9 @@ main,
 footer,
 .formChange,
 a.formLinkFisrt,
-.formButton {
+.formButton,
+section,
+section div  {
     display: flex;
 }
 
@@ -41,7 +43,8 @@ a.formLinkFisrt,
 
 a.formLinkFisrt,
 .left,
-.formButton {
+.formButton,
+section div {
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
@@ -49,12 +52,13 @@ a.formLinkFisrt,
 
 form {
     width: 21.15rem;
-    height: 21.15rem;
+    height: 29rem;
     flex-flow: column;
     background: var(--color-primary-light);
     box-shadow: 1px 1px 1px var(--fourth-color);
     border-radius: 10px;
     padding: .3em;
+    user-select: none;
 }
 
 .left,
@@ -78,8 +82,9 @@ header{
 
 main{
     flex-flow: column wrap;
-    margin-bottom: 1em;
 }
+
+
 
 header, 
 footer{
@@ -87,11 +92,42 @@ footer{
     align-content: center;
 }
 
+section {
+    width: 100%;
+    height: 7rem;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.gmail {
+    margin-bottom: .5em;
+}
+
+section div {
+    width: 100%;
+    height: 2em;
+    background: var(--third-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+.facebook {
+    background: #4267B2;
+}
+
+section div:active {
+    transform: scale(.97);
+}
+
 footer{
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
 }
+
 
 .formFooterFirst{
     width: 50%;
