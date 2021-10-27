@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-bar',
@@ -26,7 +27,7 @@ export class SideBarComponent implements OnInit {
   // To move the formCheckBox
   move: string | undefined;
 
-  constructor() { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.icon = "bars";
@@ -37,16 +38,24 @@ export class SideBarComponent implements OnInit {
 
     this.personName = "Camila yulitza";
 
-    this.display = "hidden";
+    // this.display = "hidden";
 
-    this.width = "minContainerWidht";
+    // this.width = "minContainerWidht";
+    
+    this.display = "";
+
+    this.width = "maxContainerWidht";
+
+    this.icon = "x";
+
+    this.move = "moveLeft1";
   }
 
   changeIcon() {
     if(this.icon === "bars")  {
       setTimeout(() => {
         this.display = "";
-      },225);
+      },205);
 
       this.width = "maxContainerWidht";
 
@@ -61,6 +70,28 @@ export class SideBarComponent implements OnInit {
       this.icon = "bars";
 
       this.move = "";
+    }
+  }
+
+  goTo(id:any) {
+    let newId = +id;
+
+    switch(newId) {
+      case 1:
+        this.router.navigate(["./schedule-appointment"], {relativeTo: this.route});
+      break;
+
+      case 2:
+        this.router.navigate(["./schedule-petiotion"], {relativeTo: this.route});
+      break;
+
+      case 3:
+        this.router.navigate(["./calendar"], {relativeTo: this.route});
+      break;
+
+      case 4:
+        this.router.navigate(["./appointments"], {relativeTo: this.route});
+      break;
     }
   }
 

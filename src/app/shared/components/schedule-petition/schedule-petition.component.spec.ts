@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FramePanelPagesComponent } from './frame-panel-pages.component';
+import { SchedulePetitionComponent } from './schedule-petition.component';
 
-describe('FramePanelPagesComponent', () => {
-  let component: FramePanelPagesComponent;
-  let fixture: ComponentFixture<FramePanelPagesComponent>;
+describe('SchedulePetitionComponent', () => {
+  let component: SchedulePetitionComponent;
+  let fixture: ComponentFixture<SchedulePetitionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FramePanelPagesComponent ]
+      declarations: [ SchedulePetitionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FramePanelPagesComponent);
+    fixture = TestBed.createComponent(SchedulePetitionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UsersService } from 'src/app/services/usersService.service';
 
 @Component({
@@ -8,7 +9,9 @@ import { UsersService } from 'src/app/services/usersService.service';
 })
 export class LoginComponent implements OnInit {
   
-  constructor(private usersService: UsersService) { }
+  constructor(private usersService: UsersService,
+              private router: Router,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -47,6 +50,10 @@ export class LoginComponent implements OnInit {
       this.messageColor = ""
     }, 1000)
    }
+  }
+
+  goTo() {
+    this.router.navigate(["./regist"], {relativeTo: this.route});
   }
 
 }

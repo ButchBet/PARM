@@ -1,7 +1,6 @@
 .containerSideBar {
-    height: 100vh;
+    height: 90vh;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.53);
-    position: relative;
 }
 
 .maxContainerWidht {
@@ -33,7 +32,7 @@ main {
 }
 
 header {
-    height: 4rem;
+    height: 6.7%;
     background-color: var(--color-primary);
     border-radius:0;
     flex-flow: column wrap;
@@ -55,15 +54,12 @@ header div {
 	/* display: none; */
     width: 6rem;
     height: 3rem;
-    top: 3px;
-    left: -12px;
+    top: 2.5rem;
+    left: 5rem;
     position: absolute;
     opacity: 0;
     z-index: 1;
-}
-
-.moveLeft1 {
-    left: 4.5rem !important;
+    cursor: pointer;
 }
 
 #check-menu:checked + header .menu-bar{
@@ -81,14 +77,15 @@ header div {
 
 section {
     background-color: var(--third-color);
-    height: 12rem;
-    flex-flow: column wrap;
-    justify-content:space-evenly; 
+    height: 22%;
+    flex-flow: color wrap;
+    justify-content:center; 
     align-content: center;
 }
 
+
 section img {
-    width: 60%;
+    width: 57%;
     height: 60%;
     border-radius: 100%;
     border: 2px solid var(--color-success);
@@ -97,11 +94,14 @@ section img {
 section p {
     text-align: center;
     font-weight: 500;
+    width: 5px auto;
+    margin-bottom: 0;
+    margin-top: 5px;
 }
 
 main {
     background-color: var(--color-primary-light);
-    height: 27rem;
+    height: 55%;
 }
 
 main ul {
@@ -115,6 +115,11 @@ main ul {
     padding: 0;
 }
 
+main ul li:hover {
+    text-decoration: underline;
+}
+
 footer {
-    background-color: pink;
+    background-color: var(--color-primary-dark);
+    height: 16.3%;
 }

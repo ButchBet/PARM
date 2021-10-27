@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Users } from 'src/app/services/users';
 import { UsersService } from 'src/app/services/usersService.service';
 
@@ -9,7 +10,9 @@ import { UsersService } from 'src/app/services/usersService.service';
 })
 export class RegistComponent implements OnInit {
 
-  constructor(private usersService: UsersService) { }
+  constructor(private usersService: UsersService,
+              private router: Router,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -73,5 +76,8 @@ export class RegistComponent implements OnInit {
     }, 3000);
   }
 
+  goTo() {
+    this.router.navigate(["../"], {relativeTo: this.route});
+  }
 
 }
