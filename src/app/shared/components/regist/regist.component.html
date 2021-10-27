@@ -36,7 +36,8 @@
                      placeholder="Nombre de usuario" 
                      required 
                      minlength="8" 
-                     [(ngModel)]="userName">
+                     [(ngModel)]="userName"
+                     [ngModelOptions]="{standalone: true}">
             
                 </div>
         
@@ -48,7 +49,8 @@
                      placeholder="Correo electronico" 
                      required
                      minlength="8" 
-                     [(ngModel)]="email">
+                     [(ngModel)]="email"
+                     [ngModelOptions]="{standalone: true}">
         
                 </div>
         
@@ -60,7 +62,8 @@
                      placeholder="Contraseña" 
                      required 
                      minlength="8" 
-                     [(ngModel)]="userPassword">
+                     [(ngModel)]="userPassword"
+                     [ngModelOptions]="{standalone: true}">
         
                 </div>
         
@@ -72,7 +75,8 @@
                      placeholder="Repite la contraseña" 
                      required 
                      minlength="8" 
-                     [(ngModel)]="userRepPassword">
+                     [(ngModel)]="userRepPassword"
+                     [ngModelOptions]="{standalone: true}">
         
                 </div>
         

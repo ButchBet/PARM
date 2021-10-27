@@ -1,1 +1,27 @@
-<p>side-bar works!</p>
+<div class="containerSideBar {{ width }}">
+    <input type="checkbox" id="check-menu" class="{{ move }}" (click)="changeIcon()">
+    <header class="iconOpenClose" class="{{icon}}">
+        <div class="menu-bar"></div>
+        <div class="menu-bar"></div>
+        <div class="menu-bar"></div>
+    </header>
+
+    <section class="imageName {{ display }}">
+        <img src="../assets/{{ imgUrl }}" alt="{{ imgAlt }}">
+
+        <p>{{ personName }}</p>
+    </section>
+
+    <main class="options {{ display }}">
+        <ul>
+            <li>Programar cita</li>
+            <li>Programar petición de cita</li>
+            <li>Mostrar calendario</li>
+            <li>Mostrar citas</li>
+        </ul>
+    </main>
+
+    <footer class="TODO {{ display }}">
+
+    </footer>
+</div>

@@ -30,7 +30,8 @@
                     placeholder="Usuario/correo" 
                     required 
                     minlength="8" 
-                    [(ngModel)]="userName">
+                    [(ngModel)]="userName"
+                    [ngModelOptions]="{standalone: true}">
             
                 </div>
 
@@ -42,7 +43,8 @@
                     placeholder="Contraseña" 
                     required 
                     minlength="8" 
-                    [(ngModel)]="userPassword">
+                    [(ngModel)]="userPassword"
+                    [ngModelOptions]="{standalone: true}">
             
                 </div>
 
