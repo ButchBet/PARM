@@ -1,0 +1,27 @@
+<div class="containerSideBar {{ width }}">
+    <input type="checkbox" id="check-menu" class="{{ move }}" (click)="changeIcon()">
+    <header class="iconOpenClose" class="{{icon}}">
+        <div class="menu-bar"></div>
+        <div class="menu-bar"></div>
+        <div class="menu-bar"></div>
+    </header>
+
+    <section class="imageName {{ display }}">
+        <img src="../assets/{{ imgUrl }}" alt="{{ imgAlt }}">
+
+        <p>{{ personName }}</p>
+    </section>
+
+    <main class="options {{ display }}">
+        <ul>
+            <li (click)="goTo(1)">Programar cita</li>
+            <li (click)="goTo(2)">Programar petición de cita</li>
+            <li (click)="goTo(3)">Mostrar calendario</li>
+            <li (click)="goTo(4)">Mostrar citas</li>
+        </ul>
+    </main>
+
+    <footer class="TODO {{ display }}">
+
+    </footer>
+</div>

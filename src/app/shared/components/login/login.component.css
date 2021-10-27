@@ -1,0 +1,13 @@
+section,
+main {
+    margin-bottom: .5rem;
+}
+
+.formFooterFirst {
+    position: relative;
+    left: 5px;
+}
+
+.formFooterFirst input {
+    cursor: pointer;
+}

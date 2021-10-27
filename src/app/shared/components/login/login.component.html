@@ -1,0 +1,89 @@
+<div class="containerAuth">
+    <div class="left">
+        <form action="POST" class="form" id="login" (submit)="loginValidation($event)">
+            <header>
+                <div class="formChange">
+                    <a class="formLink 
+                    formLinkFisrt 
+                    formLinkFisrt1 
+                    formLinkActive" 
+                    id="linkCreateAccount">Ingresa</a>
+                    <a class="formLink 
+                    formLinkFisrt 
+                    formLinkFisrt2 
+                    formLinkDesactive" 
+                    id="linkLogin"
+                    (click)="goTo()">Registra</a>
+                </div>
+            </header>
+            
+            <main>
+                <h2 class="formTitle">Bienvenido!</h2>
+
+                <div class="formMessage FormMesageFirst formMessage{{ messageColor }}">{{ errorMessage }}</div>
+
+                <div class="formInputGroup">
+                
+                    <input type="text" 
+                    class="formInput" 
+                    id="loginName" 
+                    autofocus 
+                    placeholder="Usuario/correo" 
+                    required 
+                    minlength="8" 
+                    [(ngModel)]="userName"
+                    [ngModelOptions]="{standalone: true}">
+            
+                </div>
+
+                <div class="formInputGroup formInputLast">
+                
+                    <input type="password" 
+                    class="formInput"
+                    id="loginPass"  
+                    placeholder="Contraseña" 
+                    required 
+                    minlength="8" 
+                    [(ngModel)]="userPassword"
+                    [ngModelOptions]="{standalone: true}">
+            
+                </div>
+
+                <div class="formInputErrorMessage formMesageLast"></div>
+
+
+                <a class="formLink formLinkLast" [routerLink]="['forget']">¿Olvidaste tu contraseña?</a>
+
+            </main>
+
+            <section>
+                <div class="gmail">
+                    <i class="uil uil-google"></i>
+                </div>
+
+                <div class="facebook">
+                    <i class="uil uil-facebook-f"></i>
+                </div>
+            </section>
+
+            <footer>
+                <div class="formFooterFirst">
+                    <label for="dataRemember">Recordar </label>
+                    <input type="checkbox" 
+                    id="dataRemember" 
+                    class="formCheckBox">
+                </div>
+
+                <div class="formFooterSecond">
+                    <input type="submit" 
+                    value="Ingresar" 
+                    class="formButton">
+                </div>
+            </footer>
+        </form>
+    </div>
+
+    <div class="right">
+        <img src="../../../../assets/loginImage.jpg" alt="logo">
+    </div>
+</div>

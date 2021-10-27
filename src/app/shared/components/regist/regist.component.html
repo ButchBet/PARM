@@ -1,0 +1,114 @@
+<div class="containerAuth">
+    <div class="left">
+        <form action="POST" class="form " id="createAccount" (submit)="RegistValidation($event)">
+  
+            <header>
+                <div class="formChange">
+                    <a class="formLink 
+                    formLinkFisrt 
+                    formLinkFisrt1 
+                    formLinkActive" 
+                    id="linkCreateAccount" 
+                    (click)="goTo()">
+                    Ingresa
+                    </a>
+        
+                    <a class="formLink 
+                    formLinkFisrt 
+                    formLinkFisrt2 
+                    formLinkDesactive" 
+                    id="linkLogin">
+                    Registra
+                    </a>
+                </div>
+            </header>
+            
+            <main>
+                <h2 class="formTitle">Bienvenido!</h2>
+        
+                <div class="formMessage FormMesageFirst formMessage{{ messageColor }}">{{ errorMessage }}</div>
+        
+                <div class="formInputGroup">
+                
+                    <input type="text"
+                     class="formInput" 
+                     id="createName" 
+                     autofocus 
+                     placeholder="Nombre de usuario" 
+                     required 
+                     minlength="8" 
+                     [(ngModel)]="userName"
+                     [ngModelOptions]="{standalone: true}">
+            
+                </div>
+        
+                <div class="formInputGroup">
+                
+                    <input type="email"
+                     class="formInput" 
+                     id="createEmail" 
+                     placeholder="Correo electronico" 
+                     required
+                     minlength="8" 
+                     [(ngModel)]="email"
+                     [ngModelOptions]="{standalone: true}">
+        
+                </div>
+        
+                <div class="formInputGroup">
+                
+                    <input type="password"
+                     class="formInput" 
+                     id="createPass"  
+                     placeholder="Contraseña" 
+                     required 
+                     minlength="8" 
+                     [(ngModel)]="userPassword"
+                     [ngModelOptions]="{standalone: true}">
+        
+                </div>
+        
+                <div class="formInputGroup formInputLast">
+                
+                    <input type="password"
+                     class="formInput" 
+                     id="createRepeatPass"  
+                     placeholder="Repite la contraseña" 
+                     required 
+                     minlength="8" 
+                     [(ngModel)]="userRepPassword"
+                     [ngModelOptions]="{standalone: true}">
+        
+                </div>
+        
+        
+                <div class="formInputErrorMessage formMesageLast"></div>
+        
+            </main>
+
+            <section>
+                <div class="gmail">
+                    <i class="uil uil-google"></i>
+                </div>
+
+                <div class="facebook">
+                    <i class="uil uil-facebook-f"></i>
+                </div>
+            </section>
+        
+            <footer class="registFooter">
+        
+                <div class="formFooterSecond formFooterSecondLast">
+                    <input type="submit"
+                     class="formButton">
+                </div>
+        
+            </footer>
+        
+        </form>
+    </div>
+
+    <div class="right">
+        <img src="../../../../assets/loginImage.jpg" alt="logo">
+    </div>
+</div>

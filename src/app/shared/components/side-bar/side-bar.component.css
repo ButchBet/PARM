@@ -1,0 +1,125 @@
+.containerSideBar {
+    height: 90vh;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.53);
+}
+
+.maxContainerWidht {
+    transition: width .5s;
+    width: 15rem;
+}
+
+.minContainerWidht {
+    transition: width .5s;
+    width: 5rem;
+    background-color: var(--color-primary)
+}
+
+.hidden {
+    transition: display .5s;
+    display: none;
+}
+
+header,
+section img,
+main li {
+    cursor: pointer;
+}
+
+header,
+section,
+main {
+    border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+header {
+    height: 6.7%;
+    background-color: var(--color-primary);
+    border-radius:0;
+    flex-flow: column wrap;
+    gap: 5px;
+    overflow: hidden;
+}
+
+
+header div {
+    width: 3rem;
+    height: .4rem;
+    transition: 0.5s;
+    border-radius: 5px;
+    background-color: rgb(33, 33, 33);
+    border: .1px solid black;
+}
+
+#check-menu{
+	/* display: none; */
+    width: 6rem;
+    height: 3rem;
+    top: 2.5rem;
+    left: 5rem;
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#check-menu:checked + header .menu-bar{
+	margin: 0;
+}
+#check-menu:checked + header .menu-bar:nth-child(1){
+	transform: rotate(45deg) translate(6px,5px);
+}
+#check-menu:checked + header .menu-bar:nth-child(2){
+	display: none;
+}
+#check-menu:checked + header .menu-bar:nth-child(3){
+	transform: rotate(-45deg) translate(3px, -4px);
+}
+
+section {
+    background-color: var(--third-color);
+    height: 22%;
+    flex-flow: color wrap;
+    justify-content:center; 
+    align-content: center;
+}
+
+
+section img {
+    width: 57%;
+    height: 60%;
+    border-radius: 100%;
+    border: 2px solid var(--color-success);
+}
+
+section p {
+    text-align: center;
+    font-weight: 500;
+    width: 5px auto;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+main {
+    background-color: var(--color-primary-light);
+    height: 55%;
+}
+
+main ul {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    text-align: center;
+    gap: 6.4rem;
+    list-style: none;
+    padding: 0;
+}
+
+main ul li:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--color-primary-dark);
+    height: 16.3%;
+}
