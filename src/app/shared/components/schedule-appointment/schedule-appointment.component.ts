@@ -11,5 +11,4 @@ export class ScheduleAppointmentComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

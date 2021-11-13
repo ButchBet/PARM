@@ -54,12 +54,15 @@ header div {
 	/* display: none; */
     width: 6rem;
     height: 3rem;
-    top: 2.5rem;
-    left: 5rem;
+    left:  7.9em;
     position: absolute;
     opacity: 0;
     z-index: 1;
     cursor: pointer;
+}
+
+input .chechMenuFirstCase {
+    left: 7.9em;
 }
 
 #check-menu:checked + header .menu-bar{

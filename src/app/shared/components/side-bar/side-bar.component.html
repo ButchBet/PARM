@@ -1,5 +1,5 @@
 <div class="containerSideBar {{ width }}">
-    <input type="checkbox" id="check-menu" class="{{ move }}" (click)="changeIcon()">
+    <input type="checkbox" id="check-menu" [ngClass]="move === 'chechMenuFirstCase' ? '': 'chechMenuFirstCase'" (click)="changeIcon()">
     <header class="iconOpenClose" class="{{icon}}">
         <div class="menu-bar"></div>
         <div class="menu-bar"></div>

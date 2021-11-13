@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsersService } from 'src/app/services/usersService.service';
 
@@ -8,12 +9,26 @@ import { UsersService } from 'src/app/services/usersService.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  formLogin: FormGroup = new FormGroup({});
   
   constructor(private usersService: UsersService,
               private router: Router,
               private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.formLogin = new FormGroup(
+      {
+        email: new FormControl('', [
+          Validators.required,
+          Validators.email
+        ]),
+
+        password: new FormControl('', [
+          Validators.required,
+          Validators.minLength(8)
+        ])
+      }
+    )
   }
 
   messageColor = "";

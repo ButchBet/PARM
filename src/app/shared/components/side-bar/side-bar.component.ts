@@ -30,8 +30,6 @@ export class SideBarComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.icon = "bars";
-
     this.imgUrl = "personFront.jpg";
 
     this.imgAlt = "Person profile";
@@ -42,34 +40,29 @@ export class SideBarComponent implements OnInit {
 
     // this.width = "minContainerWidht";
     
-    this.display = "";
+    this.display = "hidden";
 
-    this.width = "maxContainerWidht";
+    this.width = "minContainerWidht";
 
     this.icon = "x";
 
-    this.move = "moveLeft1";
   }
 
   changeIcon() {
-    if(this.icon === "bars")  {
+    if(this.icon === "x")  {
       setTimeout(() => {
         this.display = "";
       },205);
 
       this.width = "maxContainerWidht";
 
-      this.icon = "x";
-
-      this.move = "moveLeft1";
+      this.icon = "bars";
     } else {
       this.display = "hidden";
 
       this.width = "minContainerWidht";
 
-      this.icon = "bars";
-
-      this.move = "";
+      this.icon = "x";
     }
   }
 

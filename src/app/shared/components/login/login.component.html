@@ -1,6 +1,6 @@
 <div class="containerAuth">
     <div class="left">
-        <form action="POST" class="form" id="login" (submit)="loginValidation($event)">
+        <form (submit)="loginValidation($event)" [formGroup]="formLogin" action="POST" class="form" id="login">
             <header>
                 <div class="formChange">
                     <a class="formLink 
@@ -28,11 +28,8 @@
                     class="formInput" 
                     id="loginName" 
                     autofocus 
-                    placeholder="Usuario/correo" 
-                    required 
-                    minlength="8" 
-                    [(ngModel)]="userName"
-                    [ngModelOptions]="{standalone: true}">
+                    placeholder="Corre" 
+                    formControlName="email">
             
                 </div>
 
@@ -42,10 +39,7 @@
                     class="formInput"
                     id="loginPass"  
                     placeholder="Contraseña" 
-                    required 
-                    minlength="8" 
-                    [(ngModel)]="userPassword"
-                    [ngModelOptions]="{standalone: true}">
+                    formControlName="password">
             
                 </div>
 

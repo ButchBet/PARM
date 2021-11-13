@@ -1,4 +1,32 @@
+.host {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
 #calendar {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    z-index: 1;
+    position: relative;
+    left: 41.5%;
+    top: .3em;
+    width: 17%;
+    height: 2.5em;
+    overflow-y: scroll;
+}
+
+section a {
+    width: 100%;
+    height: 100%;
+}
+
+section a img {
     width: 100%;
     height: 100%;
 }
